@@ -1,0 +1,41 @@
+
+\input{documentTemplate.tex}
+
+\usepackage[defaultlines=4,all]{nowidow}
+\usepackage[outputdir=BUILD]{minted}
+
+
+\setminted{ frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+}
+
+\title{Tytuł}
+\newcommand{\setSubtitle}[1]{
+    \newcommand{\subtitle}{#1}
+    }
+
+\setSubtitle{\small{Podtytuł}}
+\author{Autor}
+\date{\today}
+
+\input{titlepage.tex}
+
+\begin{document}
+\maketitle
+{
+\setcounter{tocdepth}{3}
+\pagenumbering{roman} 
+\tableofcontents
+\newpage
+\pagenumbering{arabic} 
+}
+\section{Pierwszy rozdział}
+
+
+\addcontentsline{toc}{section}{Bibliografia}
+\bibliography{bibtex.bib}
+\bibliographystyle{plain}
+\end{document}
