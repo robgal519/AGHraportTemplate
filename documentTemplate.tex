@@ -75,3 +75,17 @@
 \usepackage{subcaption}
 \usepackage{longtable}
 \usepackage{booktabs}
+\usepackage[defaultlines=4,all]{nowidow}
+\usepackage{minted}
+
+
+\setminted{ frame=lines,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos
+}
+
+\newcommand{\setSubtitle}[1]{
+    \newcommand{\subtitle}{#1}
+    }
